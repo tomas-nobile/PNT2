@@ -1,7 +1,7 @@
 1) Crear un repositorio. Subir los ejercicios ahi.
 
 2)  En base a condiciones poder decir si un partido de futbol reune todas las condiciones 
-para empezar. En caso que alguna condicion no este aprobada (valor fale), mostrar por pantalla
+para empezar. En caso que alguna condicion no este aprobada (valor false), mostrar por pantalla
 entonces el porque de la misma.
 
 const condiciones = []
