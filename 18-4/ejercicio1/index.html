@@ -10,7 +10,8 @@
   <body>
     <div id="app">
 
-      <personajes name="hola"></personajes>
+        <personajes v-for="p in personajes" :name=p.name :pic=p.image></personajes>
+      
 
     </div>
     <script src="app.js"></script>
