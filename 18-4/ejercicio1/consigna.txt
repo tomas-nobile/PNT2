@@ -1,0 +1,3 @@
+hacer segun el rick and morty api, un componente personaje que muestre caractreisticas mas foto
+
+      <img class="card-img-top" :src="p.image" alt="Card image cap">

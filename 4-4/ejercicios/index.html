@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ordenar activos de CoinCap por cambio porcentual</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Símbolo</th>
+            <th>Cambio porcentual en las últimas 24 horas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="asset in assets" :key="asset.id">
+            <td>{{ asset.name }}</td>
+            <td>{{ asset.symbol }}</td>
+            <td>{{ asset.changePercent24Hr }}%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
