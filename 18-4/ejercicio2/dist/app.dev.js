@@ -4,13 +4,7 @@ Vue.component("persona", {
   data: function data() {
     return {
       nombre: this.nombre,
-      bandeja: [{
-        desde: "ww",
-        texto: "hola"
-      }, {
-        desde: "we",
-        texto: "chau"
-      }],
+      bandeja: [],
       mensaje: {
         desde: this.nombre,
         para: "",
@@ -26,7 +20,7 @@ Vue.component("persona", {
     this.setDestinatarios();
     console.log(this.destinatarios);
   },
-  template: "    \n  <div class=\"card\" style=\"width: 18rem;\">\n  <h3>Bandeja de entrada de {{this.nombre}} </h3>\n  <ul class=\"list-group list-group-flush\">\n    <li class=\"list-group-item\" v-for=\"m in bandeja\"><b>{{m.desde}}: </b>{{ m.texto }}</li>\n  </ul>\n  <div class=\"input-group mb-3\">\n  <select v-model=\"mensaje.para\" class=\"form-select\" aria-label=\"Default select example\">\n  <option value=\"\" selected disabled>Para</option>\n  <option v-for=\"d in destinatarios\" :value=\"d\">{{d}}</option>\n</select>\n  <input type=\"text\" v-model=\"mensaje.texto\" class=\"form-control\" placeholder=\"Escribe un mensaje\">\n  <div class=\"input-group-append\">\n    <button class=\"btn btn-outline-secondary\" @click=enviarMensaje type=\"button\">Enviar</button>\n  </div>\n</div>\n</div>\n  ",
+  template: "    \n  <div class=\"card\" style=\"width: 18rem;\">\n  <h3>{{this.nombre}}'s inbox </h3>\n  <ul class=\"list-group list-group-flush\">\n    <li class=\"list-group-item\" v-for=\"m in bandeja\"><b>{{m.desde}}: </b>{{ m.texto }}</li>\n  </ul>\n  <div class=\"input-group mb-3\">\n  <select v-model=\"mensaje.para\" class=\"form-select\" aria-label=\"Default select example\">\n  <option value=\"\" selected disabled>Para</option>\n  <option v-for=\"d in destinatarios\" :value=\"d\">{{d}}</option>\n</select>\n  <input type=\"text\" v-model=\"mensaje.texto\" class=\"form-control\" placeholder=\"Escribe un mensaje\">\n  <div class=\"input-group-append\">\n    <button class=\"btn btn-outline-secondary\" @click=enviarMensaje type=\"button\">Enviar</button>\n  </div>\n</div>\n</div>\n  ",
   props: ["nombre"],
   methods: {
     enviarMensaje: function enviarMensaje() {

@@ -2,7 +2,7 @@ Vue.component("persona", {
   data() {
     return {
       nombre:this.nombre,
-      bandeja: [{desde:"ww", texto: "hola" }, { desde:"we",texto: "chau" }],
+      bandeja: [],
       mensaje: { desde: this.nombre, para: "", texto: "" },
       destinatarios: [],
     };
@@ -16,7 +16,7 @@ Vue.component("persona", {
   },
   template: `    
   <div class="card" style="width: 18rem;">
-  <h3>Bandeja de entrada de {{this.nombre}} </h3>
+  <h3>{{this.nombre}}'s inbox </h3>
   <ul class="list-group list-group-flush">
     <li class="list-group-item" v-for="m in bandeja"><b>{{m.desde}}: </b>{{ m.texto }}</li>
   </ul>
