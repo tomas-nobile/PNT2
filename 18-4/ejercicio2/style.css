@@ -1,0 +1,45 @@
+/* Set a background color for the body */
+body {
+    background-color: #f8f9fa;
+  }
+  
+  /* Add some margin and padding to the card */
+
+  
+  /* Style the heading */
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the list items */
+  li {
+    font-size: 18px;
+  }
+  
+  /* Add some margin to the input */
+  input {
+    margin-top: 20px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+  

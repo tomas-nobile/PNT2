@@ -1,0 +1,4 @@
+        <ol>
+            <li>Hacer un componente que se llame Personas</li>
+            <li>Que el jugador pueda hablar a otro Personas y ese Personas muestra el mensaje y de quien lo recibio</li>
+        </ol>
